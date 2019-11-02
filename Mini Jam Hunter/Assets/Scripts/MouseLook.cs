@@ -9,7 +9,7 @@ public class MouseLook : MonoBehaviour
     [SerializeField]
     private float clampAngle = 80.0f;
 
-    private float rottationY = 0.0f;
+    private float rotationY = 0.0f;
     private float rotationX = 0.0f;
 
     [SerializeField]
@@ -30,7 +30,7 @@ public class MouseLook : MonoBehaviour
     private void Start()
     {
         Vector3 startRotation = transform.localRotation.eulerAngles;
-        rottationY = startRotation.y;
+        rotationY = startRotation.y;
         rotationX = startRotation.x;
     }
 
@@ -52,12 +52,12 @@ public class MouseLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = -Input.GetAxis("Mouse Y");
 
-        rottationY += mouseX * mouseSensitivity * Time.deltaTime;
+        rotationY += mouseX * mouseSensitivity * Time.deltaTime;
         rotationX += mouseY * mouseSensitivity * Time.deltaTime;
 
         rotationX = Mathf.Clamp(rotationX, -clampAngle, clampAngle);
 
-        Quaternion localRotation = Quaternion.Euler(rotationX, rottationY, 0.0f);
+        Quaternion localRotation = Quaternion.Euler(rotationX, rotationY, 0.0f);
         transform.rotation = localRotation;
 
     }
