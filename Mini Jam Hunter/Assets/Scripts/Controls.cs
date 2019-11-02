@@ -89,4 +89,12 @@ public class Controls : MonoBehaviour
         return Vector3.Dot(moveDirection.normalized, transform.forward);
     }
 
+
+    public bool isMoving
+    {
+        get
+        {
+            return myAgent.velocity.sqrMagnitude > 0.0f;
+        }
+    }
 }
