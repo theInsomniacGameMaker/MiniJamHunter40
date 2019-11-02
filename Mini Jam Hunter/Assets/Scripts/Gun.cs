@@ -16,6 +16,7 @@ public class Gun : MonoBehaviour
     private float fireRate = 15.0f;
 
     private float nextTimeToFire = 0.0f;
+
     private void Start()
     {
          

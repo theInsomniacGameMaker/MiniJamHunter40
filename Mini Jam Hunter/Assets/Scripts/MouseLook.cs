@@ -13,7 +13,17 @@ public class MouseLook : MonoBehaviour
     private float rotationX = 0.0f;
 
     [SerializeField]
-    private bool allowMovement = false;
+    private bool allowRotation = false;
+
+    private void OnEnable()
+    {
+        Controls.OnMiddleMouseButtonClicked += TurnOffRotation;
+    }
+
+    private void OnDisable()
+    {
+        Controls.OnMiddleMouseButtonClicked -= TurnOffRotation;
+    }
 
     private void Start()
     {
@@ -24,14 +34,14 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
-        if (!allowMovement)
+        if (!allowRotation)
         {
             Rotate();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            allowMovement = !allowMovement;
+            allowRotation = !allowRotation;
         }
     }
 
@@ -48,5 +58,10 @@ public class MouseLook : MonoBehaviour
         Quaternion localRotation = Quaternion.Euler(rotationX, rottationY, 0.0f);
         transform.rotation = localRotation;
 
+    }
+
+    private void TurnOffRotation()
+    {
+        allowRotation = !allowRotation;
     }
 }
