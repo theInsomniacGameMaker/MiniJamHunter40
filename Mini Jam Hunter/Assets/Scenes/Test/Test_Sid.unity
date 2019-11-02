@@ -361,9 +361,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCamera: {fileID: 245903101}
-  range: 100
-  damage: 0
-  fireRate: 15
+  guns:
+  - name: Pistol
+    damage: 50
+    fireRate: 2
+    range: 100
 --- !u!65 &1506507612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -456,6 +458,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2044087052}
   speed: 4
+  dragSpeed: 2
+  edgeSize: 30
+  speedFactor: 0
 --- !u!20 &1543567662
 Camera:
   m_ObjectHideFlags: 0

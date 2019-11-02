@@ -85,7 +85,8 @@ public class Controls : MonoBehaviour
 
     private float GetDotDirection()
     {
-        Vector3 moveDirection = myAgent.nextPosition - transform.position;
+        //Vector3 moveDirection = myAgent.nextPosition - transform.position;
+        Vector3 moveDirection =  transform.position- myAgent.nextPosition;
         return Vector3.Dot(moveDirection.normalized, transform.forward);
     }
 
