@@ -24,10 +24,13 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && Time.time>nextTimeToFire)
+        if (Controls.Instance.currentView == View.FirstPerson)
         {
-            nextTimeToFire = Time.time + 1.0f / fireRate;
-            Shoot();
+            if (Input.GetMouseButton(0) && Time.time > nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1.0f / fireRate;
+                Shoot();
+            }
         }
     }
 

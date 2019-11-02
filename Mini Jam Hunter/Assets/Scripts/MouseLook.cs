@@ -18,11 +18,13 @@ public class MouseLook : MonoBehaviour
     private void OnEnable()
     {
         Controls.OnMiddleMouseButtonClicked += TurnOffRotation;
+        Controls.OnRightMouseButtonClicked += ResetRotation;
     }
 
     private void OnDisable()
     {
         Controls.OnMiddleMouseButtonClicked -= TurnOffRotation;
+        Controls.OnRightMouseButtonClicked -= ResetRotation;
     }
 
     private void Start()
@@ -64,4 +66,10 @@ public class MouseLook : MonoBehaviour
     {
         allowRotation = !allowRotation;
     }
+
+    private void ResetRotation()
+    {
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+    }
+
 }
