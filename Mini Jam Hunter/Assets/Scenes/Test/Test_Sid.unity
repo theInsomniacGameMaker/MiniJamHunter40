@@ -456,6 +456,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2044087052}
   speed: 4
+  dragSpeed: 2
+  edgeSize: 30
+  speedFactor: 0
 --- !u!20 &1543567662
 Camera:
   m_ObjectHideFlags: 0
