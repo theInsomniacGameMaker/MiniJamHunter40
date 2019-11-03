@@ -23,6 +23,14 @@ public class Controls : MonoBehaviour
 
     private NavMeshAgent myAgent;
 
+    public bool isMoving
+    {
+        get
+        {
+            return myAgent.velocity.sqrMagnitude > 0.0f;
+        }
+    }
+
     private void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
@@ -62,8 +70,6 @@ public class Controls : MonoBehaviour
         }
         myAgent.updatePosition = false;
 
-        //Debug.Log(GetDotDirection());
-        //if (GetDotDirection())
         transform.position = myAgent.nextPosition;
     }
 
@@ -86,16 +92,10 @@ public class Controls : MonoBehaviour
     private float GetDotDirection()
     {
         //Vector3 moveDirection = myAgent.nextPosition - transform.position;
-        Vector3 moveDirection =  transform.position- myAgent.nextPosition;
+        Vector3 moveDirection = transform.position - myAgent.nextPosition;
         return Vector3.Dot(moveDirection.normalized, transform.forward);
     }
-
-
-    public bool isMoving
-    {
-        get
-        {
-            return myAgent.velocity.sqrMagnitude > 0.0f;
-        }
-    }
 }
+
+
+

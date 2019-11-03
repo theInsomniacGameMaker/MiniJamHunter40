@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 979712220}
   - component: {fileID: 7517651705832886586}
   - component: {fileID: 8310442276053438613}
+  - component: {fileID: 8157067222779933671}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -493,9 +494,9 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8579172114126471378}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.25
+  m_Radius: 0.79
   m_Speed: 15
   m_Acceleration: 15
   avoidancePriority: 50
@@ -537,7 +538,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &8310442276053438613
 CapsuleCollider:
@@ -550,9 +551,22 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.91630745
-  m_Height: 5.7949705
+  m_Height: 6.126993
   m_Direction: 1
-  m_Center: {x: 0.023564816, y: -0.27316618, z: 0}
+  m_Center: {x: 0, y: -0.4391775, z: 0}
+--- !u!114 &8157067222779933671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579172114126471378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef8028c3ec7faa4993174e99f64411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthMax: 100
 --- !u!1001 &155241635
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Entity : MonoBehaviour {
 
     private int healthCurrent;
     [SerializeField] private int healthMax;
 
+    protected NavMeshAgent myAgent;
+    private void Awake()
+    {
+        myAgent = GetComponent<NavMeshAgent>();
+    }
     protected void Start() {
         ResetDefaultValues();
     }

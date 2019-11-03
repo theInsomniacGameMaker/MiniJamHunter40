@@ -361,9 +361,10 @@ GameObject:
   - component: {fileID: 1592184560480305055}
   - component: {fileID: 7384407706766984770}
   - component: {fileID: 3952243804866260657}
+  - component: {fileID: 2769457881550118496}
   m_Layer: 0
   m_Name: ZombieLarge
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,7 +393,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8579172114126471378}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.25
+  m_Radius: 0.92
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -419,3 +420,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthMax: 200
   zombieType: 1
+--- !u!136 &2769457881550118496
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579172114126471378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0118973
+  m_Height: 6.160823
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.41906786, z: 0}

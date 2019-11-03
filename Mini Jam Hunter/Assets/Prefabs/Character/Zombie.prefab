@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a094cd09c8256084bb9339f058300552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entity: {fileID: 0}
+  entity: {fileID: 6265084891425791345}
   healthCurrent: {fileID: 3170833030626158685}
 --- !u!1 &3604650050655785808
 GameObject:
@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a094cd09c8256084bb9339f058300552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entity: {fileID: 0}
+  entity: {fileID: 6265084891425791345}
   healthCurrent: {fileID: 8537428460748922837}
 --- !u!1 &8306219334865242310
 GameObject:
@@ -783,11 +783,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1592184560480305055}
   - component: {fileID: 7384407706766984770}
-  - component: {fileID: 2316061855180368907}
   - component: {fileID: 6265084891425791345}
+  - component: {fileID: 5114022615481330508}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -817,7 +817,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8579172114126471378}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.25
+  m_Radius: 0.84
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -830,19 +830,6 @@ NavMeshAgent:
   m_BaseOffset: 3.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!135 &2316061855180368907
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8579172114126471378}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 17.07
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6265084891425791345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,9 +842,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacf53aa8aed4045b89f8cd82798f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCurrent: 100
   healthMax: 100
   zombieType: 0
+--- !u!136 &5114022615481330508
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579172114126471378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.90557176
+  m_Height: 6.15712
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.43852115, z: -0.00000017881393}
 --- !u!1 &8882380026896632032
 GameObject:
   m_ObjectHideFlags: 0
