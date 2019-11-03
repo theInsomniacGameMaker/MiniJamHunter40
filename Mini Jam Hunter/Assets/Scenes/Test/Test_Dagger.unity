@@ -244,11 +244,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6962727185444913041, guid: f8f928cf345d8c748919458a3a6bd284,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1209107666}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8f928cf345d8c748919458a3a6bd284, type: 3}
 --- !u!1 &410573596
@@ -484,18 +479,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209107666 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8157067222779933671, guid: 5de993d2926501d4098cf9c1c1d733d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 662167027}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef8028c3ec7faa4993174e99f64411a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1240628992
 PrefabInstance:
   m_ObjectHideFlags: 0
