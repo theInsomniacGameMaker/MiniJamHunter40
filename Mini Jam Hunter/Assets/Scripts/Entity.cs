@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour {
 
-    [SerializeField] private int healthCurrent;
+    private int healthCurrent;
     [SerializeField] private int healthMax;
 
-    private void Start() {
+    protected void Start() {
         ResetDefaultValues();
     }
 
