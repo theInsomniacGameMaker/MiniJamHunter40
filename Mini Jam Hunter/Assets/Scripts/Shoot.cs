@@ -6,7 +6,7 @@ using UnityEngine;
 public struct Gun
 {
     public string name;
-    public float damage;
+    public int damage;
     public float fireRate;
     public float range;
 }

@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class Entity : MonoBehaviour {
 
-    protected float healthCurrent;
-    [SerializeField] protected float healthMax;
+    [SerializeField] protected int healthCurrent;
+    [SerializeField] protected int healthMax;
 
     protected NavMeshAgent myAgent;
 
@@ -24,11 +24,11 @@ public class Entity : MonoBehaviour {
         healthCurrent = healthMax;
     }
 
-    public float GetHealthCurrent()
+    public int GetHealthCurrent()
     {
         return healthCurrent;
     }
-    public float GetHealthMax()
+    public int GetHealthMax()
     {
         return healthMax;
     }
@@ -39,7 +39,7 @@ public class Entity : MonoBehaviour {
         return healthPercent <= 1 ? healthPercent : 1;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         healthCurrent -= damage;
     }

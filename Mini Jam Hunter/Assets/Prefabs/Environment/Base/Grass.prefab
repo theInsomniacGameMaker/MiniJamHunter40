@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3507112028649349747}
   - component: {fileID: 1765500249774016647}
   m_Layer: 0
-  m_Name: Sidewalk 1
+  m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cade84b22849c634f8d6c3b025c77d0b, type: 2}
+  - {fileID: 2100000, guid: ef49d9c7727c58143a76bc5741a45699, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

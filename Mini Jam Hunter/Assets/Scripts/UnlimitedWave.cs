@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wave : MonoBehaviour {
+public class UnlimitedWave : MonoBehaviour {
     public List<Spawn> spawns;
 
-    void Start() {
+    private void Update() {
         foreach (Spawn spawn in spawns) {
-            spawn.SpawnEnemy();
+            spawn.CreateEnemy();
         }
     }
 }

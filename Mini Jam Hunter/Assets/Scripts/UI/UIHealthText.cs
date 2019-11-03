@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIHealthFill : MonoBehaviour
+public class UIHealthText : MonoBehaviour
 {
     public Entity player;
-    private Image image;
+    private Text text;
+
     private void Awake()
     {
-        image = GetComponent<Image>();
+        text = GetComponent<Text>();
     }
 
     private void Update()
     {
-        image.fillAmount = player.GetHealthPercent();
+        text.text = player.GetHealthCurrent().ToString();
     }
 }

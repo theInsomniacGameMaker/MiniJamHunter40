@@ -9,6 +9,7 @@ public class Zombie : Entity
 {
     [SerializeField]
     private ZombieType zombieType;
+    public int damage;
 
     private SphereCollider sphereCollider;
 

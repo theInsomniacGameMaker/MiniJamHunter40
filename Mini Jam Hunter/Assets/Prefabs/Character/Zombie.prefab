@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8724957136925627746}
   m_Layer: 0
   m_Name: Hand_Right
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 6598981927372098862}
   m_Layer: 0
   m_Name: Hand_Left
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 2432169965129709476}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 2073509122890671836}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,9 +855,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aacf53aa8aed4045b89f8cd82798f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthCurrent: 100
   healthMax: 100
-  isPlayer: 0
   zombieType: 0
+  damage: 15
+  player: {fileID: 0}
+  foundPlayer: 0
+  willPatrol: 0
 --- !u!136 &5114022615481330508
 CapsuleCollider:
   m_ObjectHideFlags: 0

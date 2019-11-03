@@ -10,7 +10,7 @@ public class Player : Entity
         if (collision.transform.CompareTag("Zombie"))
         {
             Debug.Log("Collided with Zombie");
-            TakeDamage(0.35f);
+            TakeDamage(collision.gameObject.GetComponent<Zombie>().damage);
         }
     }
 
