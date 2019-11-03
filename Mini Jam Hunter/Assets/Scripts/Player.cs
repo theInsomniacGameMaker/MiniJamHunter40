@@ -5,11 +5,12 @@ using UnityEngine;
 public class Player : Entity
 {
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.transform.CompareTag("Zombie"))
         {
             Debug.Log("Collided with Zombie");
+            TakeDamage(0.35f);
         }
     }
 

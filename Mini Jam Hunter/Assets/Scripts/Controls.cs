@@ -58,13 +58,20 @@ public class Controls : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && currentView == View.TopDown)
         {
             RaycastHit hit;
-
-            if (Physics.Raycast(topDown.ScreenPointToRay(Input.mousePosition), out hit, 1000))
+            Ray ray = topDown.ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(ray.origin, ray.direction * 1000, Color.white, 5.0f);
+            if (Physics.Raycast(topDown.ScreenPointToRay(Input.mousePosition), out hit, 1000, 1<<9))
             {
+                Debug.Log("Hit something");
                 if (hit.transform.CompareTag("Ground"))
                 {
                     myAgent.destination = hit.point;
                     OnRightMouseButtonClicked();
+                    Debug.Log("was ground");
+                }
+                else
+                {
+                    Debug.Log("Didn't hit ground but hit: " + hit.transform.name);
                 }
             }
         }

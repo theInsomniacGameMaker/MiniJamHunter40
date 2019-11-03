@@ -5,32 +5,42 @@ using UnityEngine.AI;
 
 public class Entity : MonoBehaviour {
 
-    private int healthCurrent;
-    [SerializeField] private int healthMax;
+    private float healthCurrent;
+    [SerializeField] private float healthMax;
 
     protected NavMeshAgent myAgent;
     private void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
     }
-    protected void Start() {
+    protected void Start()
+    {
         ResetDefaultValues();
     }
 
-    private void ResetDefaultValues() {
+    private void ResetDefaultValues()
+    {
         healthCurrent = healthMax;
     }
 
 
-    public int GetHealthCurrent() {
+    public float GetHealthCurrent()
+    {
         return healthCurrent;
     }
-    public int GetHealthMax() {
+    public float GetHealthMax()
+    {
         return healthMax;
     }
 
-    public float GetHealthPercent() {
+    public float GetHealthPercent()
+    {
         float healthPercent = healthCurrent / (float)healthMax;
         return healthPercent <= 1 ? healthPercent : 1;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        healthCurrent -= damage;
     }
 }
