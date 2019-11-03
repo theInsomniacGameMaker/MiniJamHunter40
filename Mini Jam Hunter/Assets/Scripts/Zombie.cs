@@ -15,7 +15,7 @@ public class Zombie : Entity
     public Transform player;
     public bool foundPlayer;
     public bool willPatrol;
-    private void Start()
+    protected override void Start()
     {
         base.Start();
         sphereCollider = transform.GetChild(0).GetComponent<SphereCollider>();
@@ -69,7 +69,10 @@ public class Zombie : Entity
 
             Debug.DrawRay(transform.position, player.position - transform.position, Color.red, 5.0f);
         }
-     
+        
+        if (healthCurrent <= 0) {
+            Destroy(gameObject);
+        }
     }
 
 

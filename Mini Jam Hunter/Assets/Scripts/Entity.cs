@@ -5,18 +5,16 @@ using UnityEngine.AI;
 
 public class Entity : MonoBehaviour {
 
-    private float healthCurrent;
-    [SerializeField] private float healthMax;
+    protected float healthCurrent;
+    [SerializeField] protected float healthMax;
 
     protected NavMeshAgent myAgent;
-
-    public bool isPlayer=false;
 
     private void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
     }
-    protected void Start()
+    protected virtual void Start()
     {
         ResetDefaultValues();
     }
@@ -24,14 +22,6 @@ public class Entity : MonoBehaviour {
     private void ResetDefaultValues()
     {
         healthCurrent = healthMax;
-    }
-
-    private void Update()
-    {
-        if (healthCurrent<=0.0f && !isPlayer)
-        {
-            Destroy(gameObject);
-        }
     }
 
     public float GetHealthCurrent()
