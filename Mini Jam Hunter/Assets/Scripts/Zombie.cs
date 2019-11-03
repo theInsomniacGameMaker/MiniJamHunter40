@@ -12,8 +12,8 @@ public class Zombie : Entity
 
     private SphereCollider sphereCollider;
 
-    Transform player;
-    private bool foundPlayer;
+    public Transform player;
+    public bool foundPlayer;
     private void Start()
     {
         base.Start();
@@ -63,12 +63,5 @@ public class Zombie : Entity
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            foundPlayer = true;
-            player = other.transform;
-        }
-    }
+   
 }
