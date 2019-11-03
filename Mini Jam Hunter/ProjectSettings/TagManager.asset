@@ -16,8 +16,8 @@ TagManager:
   - 
   - 
   - PickUp
-  - 
-  - 
+  - Ground
+  - PlayerDetection
   - 
   - 
   - 

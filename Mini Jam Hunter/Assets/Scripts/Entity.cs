@@ -9,6 +9,9 @@ public class Entity : MonoBehaviour {
     [SerializeField] private float healthMax;
 
     protected NavMeshAgent myAgent;
+
+    public bool isPlayer=false;
+
     private void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
@@ -23,6 +26,13 @@ public class Entity : MonoBehaviour {
         healthCurrent = healthMax;
     }
 
+    private void Update()
+    {
+        if (healthCurrent<=0.0f && !isPlayer)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public float GetHealthCurrent()
     {

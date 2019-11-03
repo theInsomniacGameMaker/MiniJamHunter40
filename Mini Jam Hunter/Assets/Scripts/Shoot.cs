@@ -43,9 +43,13 @@ public class Shoot : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range))
+        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range, ~(1 << 10)))
         {
             Debug.Log(hit.transform.name);
+            if (hit.transform.CompareTag("Zombie"))
+            {
+                hit.transform.GetComponent<Entity>().TakeDamage(guns[currentSelected].damage);
+            }
         }
     }
 }

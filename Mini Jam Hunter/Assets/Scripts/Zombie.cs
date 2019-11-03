@@ -17,11 +17,13 @@ public class Zombie : Entity
     private void Start()
     {
         base.Start();
-        sphereCollider = GetComponent<SphereCollider>();
+        sphereCollider = transform.GetChild(0).GetComponent<SphereCollider>();
+
         if (sphereCollider == null)
         {
-            sphereCollider = gameObject.AddComponent<SphereCollider>();
+            sphereCollider = transform.GetChild(0).gameObject.AddComponent<SphereCollider>();
         }
+
         sphereCollider.isTrigger = true;
 
         switch (zombieType)
