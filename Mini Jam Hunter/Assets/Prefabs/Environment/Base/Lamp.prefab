@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 1892481432886338176}
   - component: {fileID: 4085951976823485300}
   - component: {fileID: 3608061803790876600}
+  - component: {fileID: 895870436722525946}
   m_Layer: 0
   m_Name: Lamp_Lens
   m_TagString: Untagged
@@ -481,6 +482,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &895870436722525946
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078999596268700268}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7660745704751178746, guid: d0b579f428e856242a0b1fd489bf1d43, type: 3}
 --- !u!1 &6797329871739676187
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +507,7 @@ GameObject:
   - component: {fileID: 6112472556428714823}
   - component: {fileID: 6399861436217345070}
   - component: {fileID: 3964880722374922366}
+  - component: {fileID: 5163359208201668449}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -562,3 +578,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5163359208201668449
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6797329871739676187}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -626747878123925915, guid: d0b579f428e856242a0b1fd489bf1d43, type: 3}

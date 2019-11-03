@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2200731017597775186}
   - component: {fileID: 6684235872322852060}
   - component: {fileID: 3923498878130555152}
+  - component: {fileID: 1909771101322123551}
   m_Layer: 0
   m_Name: MailBox_Door
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1909771101322123551
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846714212792202035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6738912700911771367, guid: 0dac913d6c85759478231721287e5d54, type: 3}
 --- !u!1 &2101701880831685009
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 2776303650634712901}
   - component: {fileID: 4369740805691800736}
   - component: {fileID: 9086290893165270020}
+  - component: {fileID: 2246810756174983737}
   m_Layer: 0
   m_Name: MailBox_Case
   m_TagString: Untagged
@@ -159,3 +175,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2246810756174983737
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101701880831685009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6587879854150186429, guid: 0dac913d6c85759478231721287e5d54, type: 3}
