@@ -51,7 +51,7 @@ public class Controls : MonoBehaviour
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(topDown.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            if (Physics.Raycast(topDown.ScreenPointToRay(Input.mousePosition), out hit, 1000))
             {
                 if (hit.transform.CompareTag("Ground"))
                 {
@@ -62,7 +62,7 @@ public class Controls : MonoBehaviour
         }
         myAgent.updatePosition = false;
 
-        Debug.Log(GetDotDirection());
+        //Debug.Log(GetDotDirection());
         //if (GetDotDirection())
         transform.position = myAgent.nextPosition;
     }
