@@ -43,4 +43,9 @@ public class Entity : MonoBehaviour {
     {
         healthCurrent -= damage;
     }
+
+    public void Heal(int amount)
+    {
+        healthCurrent += amount;
+    }
 }

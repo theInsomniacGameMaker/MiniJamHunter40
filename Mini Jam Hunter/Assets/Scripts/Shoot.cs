@@ -9,6 +9,8 @@ public struct Gun
     public int damage;
     public float fireRate;
     public float range;
+    public int maxAmmo;
+    public int currentAmmo;
 }
 
 public class Shoot : MonoBehaviour
@@ -41,15 +43,24 @@ public class Shoot : MonoBehaviour
 
     private void Fire()
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range, ~(1 << 10)))
+        if (guns[currentSelected].maxAmmo>=1)
         {
-            Debug.Log(hit.transform.name);
-            if (hit.transform.CompareTag("Zombie"))
+            RaycastHit hit;
+
+            if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range, ~(1 << 10)))
             {
-                hit.transform.GetComponent<Entity>().TakeDamage(guns[currentSelected].damage);
+                Debug.Log(hit.transform.name);
+                if (hit.transform.CompareTag("Zombie"))
+                {
+                    hit.transform.GetComponent<Entity>().TakeDamage(guns[currentSelected].damage);
+                }
             }
+            guns[currentSelected].currentAmmo--;
         }
+    }
+
+    public void RefillAmmo()
+    {
+        guns[currentSelected].currentAmmo = guns[currentSelected].maxAmmo;
     }
 }
