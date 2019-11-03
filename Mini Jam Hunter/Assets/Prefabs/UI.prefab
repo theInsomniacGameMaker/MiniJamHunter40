@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 290345185}
   - component: {fileID: 290345184}
   - component: {fileID: 1144033491930728641}
-  - component: {fileID: 5506621252731575105}
+  - component: {fileID: 378104535}
   m_Layer: 5
   m_Name: Health_Text
   m_TagString: Untagged
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
---- !u!114 &5506621252731575105
+--- !u!114 &378104535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 290345182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb39a99c7fec009489deaee75c51018f, type: 3}
+  m_Script: {fileID: 11500000, guid: 91a1fe6eaa74d154196debc0d37e25f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 6807428413055350401}
   - component: {fileID: 2161429303427628174}
   - component: {fileID: 8488328039491931622}
-  - component: {fileID: 6594432103584534031}
+  - component: {fileID: 478772288}
   m_Layer: 5
   m_Name: Health_Green
   m_TagString: Untagged
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6594432103584534031
+--- !u!114 &478772288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6523936861709890851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91a1fe6eaa74d154196debc0d37e25f4, type: 3}
+  m_Script: {fileID: 11500000, guid: eb39a99c7fec009489deaee75c51018f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}

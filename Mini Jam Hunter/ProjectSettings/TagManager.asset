@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Zombie
+  - AmmoBox
+  - HealthPack
   layers:
   - Default
   - TransparentFX

@@ -23,11 +23,15 @@ public class Player : Entity
     {
         if (collision.transform.CompareTag("HealthPack"))
         {
+            Debug.Log("Got HEalth PAck");
             Heal(100);
+            Destroy(collision.transform.gameObject);
         }
         else if (collision.transform.CompareTag("AmmoBox"))
         {
+            Debug.Log("Refill Ammo");
             FindObjectOfType<Shoot>().RefillAmmo();
+            Destroy(collision.transform.gameObject);
         }
     }
 }
