@@ -32,7 +32,7 @@ public class MouseLook : MonoBehaviour
         Vector3 startRotation = transform.localRotation.eulerAngles;
         rotationY = startRotation.y;
         rotationX = startRotation.x;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -66,14 +66,14 @@ public class MouseLook : MonoBehaviour
     private void TurnOffRotation()
     {
         allowRotation = !allowRotation;
-        if (Cursor.lockState == CursorLockMode.None)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else if (Cursor.lockState == CursorLockMode.Locked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
+        //if (Cursor.lockState == CursorLockMode.None)
+        //{
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //}
+        //else if (Cursor.lockState == CursorLockMode.Locked)
+        //{
+        //    Cursor.lockState = CursorLockMode.None;
+        //}
     }
 
     private void ResetRotation()

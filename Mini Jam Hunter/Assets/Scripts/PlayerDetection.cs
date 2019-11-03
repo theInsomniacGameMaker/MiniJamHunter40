@@ -8,7 +8,7 @@ public class PlayerDetection : MonoBehaviour
 
     private void Awake()
     {
-        parent = GetComponent<Zombie>();
+        parent = transform.parent.GetComponent<Zombie>();
     }
     private void OnTriggerStay(Collider other)
     {
