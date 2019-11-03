@@ -14,6 +14,7 @@ public class Zombie : Entity
 
     public Transform player;
     public bool foundPlayer;
+    public bool willPatrol;
     private void Start()
     {
         base.Start();
@@ -39,6 +40,13 @@ public class Zombie : Entity
             default:
                 break;
         }
+
+        willPatrol = Random.Range(0, 1) == 0;
+
+        if (willPatrol)
+        {
+            StartCoroutine(Patrol());
+        }
     }
 
     private void Update()
@@ -60,6 +68,28 @@ public class Zombie : Entity
             }
 
             Debug.DrawRay(transform.position, player.position - transform.position, Color.red, 5.0f);
+        }
+     
+    }
+
+
+    IEnumerator Patrol()
+    {
+        while (true)
+        {
+            if (!foundPlayer)
+            {
+                RaycastHit raycastHit;
+                Debug.DrawRay(new Vector3(Random.Range(-100,100), 10, Random.Range(-100, 100)), Vector3.down, Color.yellow, 10f);
+                if (Physics.Raycast(new Vector3(Random.Range(-100, 100), 10, Random.Range(-100, 100)), Vector3.down, out raycastHit, 10, 1 << 9))
+                {
+                    if(raycastHit.transform.CompareTag("Ground"))
+                    {
+                        myAgent.SetDestination(raycastHit.point);
+                    }
+                }
+            }
+            yield return new WaitForSeconds(Random.Range(3, 7));
         }
     }
 
