@@ -25,6 +25,9 @@ public class Controls : MonoBehaviour
     private NavMeshAgent myAgent;
 
     public int score;
+    public float nextStep;
+    public float footStepInterval = 0.4f;
+    
     public bool isMoving
     {
         get
@@ -80,6 +83,15 @@ public class Controls : MonoBehaviour
         myAgent.updatePosition = false;
 
         transform.position = myAgent.nextPosition;
+
+        if (isMoving)
+        {
+            if (nextStep<Time.time)
+            {
+                PlaySound("Footstep Dirtier "+Random.Range(1,4), transform.position, 0.3f);
+                nextStep = Time.time + footStepInterval;
+            }
+        }
     }
 
 
@@ -105,9 +117,9 @@ public class Controls : MonoBehaviour
         return Vector3.Dot(moveDirection.normalized, transform.forward);
     }
 
-    public void PlaySound(string name, Vector3 position)
+    public void PlaySound(string name, Vector3 position, float volume = 1.0f)
     {
-        AudioSource.PlayClipAtPoint(Resources.Load(name) as AudioClip, position);
+        AudioSource.PlayClipAtPoint(Resources.Load(name) as AudioClip, position, volume);
     }
 }
 
