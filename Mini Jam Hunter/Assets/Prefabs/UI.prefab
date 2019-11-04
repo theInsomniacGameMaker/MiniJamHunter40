@@ -1618,7 +1618,6 @@ GameObject:
   - component: {fileID: 7797171041115804670}
   - component: {fileID: 7797171041115804611}
   - component: {fileID: 7797171041115804668}
-  - component: {fileID: 7797171041115804669}
   m_Layer: 5
   m_Name: Icon_Ammo
   m_TagString: Untagged
@@ -1642,8 +1641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 105, y: 0}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7797171041115804611
 CanvasRenderer:
@@ -1666,12 +1665,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.012152195, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e04e606d4c3459f489b6e38165a6a6c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52c6bb6756c40774794d3b8e4834e243, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1681,18 +1680,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7797171041115804669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7797171041115804671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91a1fe6eaa74d154196debc0d37e25f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7797171041181334462
 GameObject:
   m_ObjectHideFlags: 0
