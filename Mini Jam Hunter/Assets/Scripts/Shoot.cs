@@ -66,4 +66,8 @@ public class Shoot : MonoBehaviour
     {
         guns[currentSelected].currentAmmo = guns[currentSelected].maxAmmo;
     }
+
+    public int GetAmmoCount() {
+        return guns[currentSelected].currentAmmo;
+    }
 }
