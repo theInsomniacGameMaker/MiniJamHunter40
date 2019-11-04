@@ -48,7 +48,14 @@ public class Shoot : MonoBehaviour
                 }
             }
 
-            if (Input.mouseScrollDelta.y>0.5f)
+            if (Input.mouseScrollDelta.y > 0.5f)
+            {
+                currentSelected++;
+                currentSelected = currentSelected % guns.Length;
+                TurnAllMeshesOff();
+                guns[currentSelected].gunMesh.SetActive(true);
+            }
+            else if (Input.mouseScrollDelta.y < -0.5f)
             {
                 currentSelected++;
                 currentSelected = currentSelected % guns.Length;

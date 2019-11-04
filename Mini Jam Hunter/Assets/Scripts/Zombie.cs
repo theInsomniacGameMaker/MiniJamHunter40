@@ -104,6 +104,5 @@ public class Zombie : Entity
         base.TakeDamage(damage);
         myAgent.SetDestination (FindObjectOfType<Player>().transform.position);
         Controls.Instance.PlaySound("Zombie Short Moan", transform.position);
-        
     }
 }
