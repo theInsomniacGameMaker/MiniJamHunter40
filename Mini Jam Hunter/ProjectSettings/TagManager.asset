@@ -9,6 +9,7 @@ TagManager:
   - AmmoBox
   - HealthPack
   - WaveSpawner
+  - UIDeath
   layers:
   - Default
   - TransparentFX

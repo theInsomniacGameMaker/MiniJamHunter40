@@ -16,6 +16,6 @@ public class UIDeathText : MonoBehaviour
 
     private void Update()
     {
-        text.text = "You died with a score of " + controls.score.ToString();
+        text.text = "You died with a score of \n" + controls.score.ToString();
     }
 }

@@ -6,6 +6,14 @@ public class Player : Entity
 {
     float nextTimeToTakeDamage = 0.0f;
     float damageInterval = 2.0f;
+    GameObject deathUI;
+    
+
+    protected override void Awake() {
+        base.Awake();
+        deathUI = GameObject.FindGameObjectWithTag("UIDeath");
+        deathUI.SetActive(false);
+    }
     private void OnCollisionStay(Collision collision)
     {
         if (collision.transform.CompareTag("Zombie"))

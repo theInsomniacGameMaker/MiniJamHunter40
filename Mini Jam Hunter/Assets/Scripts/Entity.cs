@@ -10,7 +10,7 @@ public class Entity : MonoBehaviour {
 
     protected NavMeshAgent myAgent;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
     }
@@ -42,6 +42,9 @@ public class Entity : MonoBehaviour {
     public virtual void TakeDamage(int damage)
     {
         healthCurrent -= damage;
+        if (healthCurrent < 0) {
+            healthCurrent = 0;
+        }
     }
 
     public void Heal(int amount)
