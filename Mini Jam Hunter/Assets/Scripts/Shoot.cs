@@ -67,7 +67,7 @@ public class Shoot : MonoBehaviour
 
     private void Fire()
     {
-        Controls.Instance.PlaySound(guns[currentSelected].AudioClipName, transform.position);
+        Controls.Instance.PlaySound(guns[currentSelected].AudioClipName, transform.position, 0.5f);
         RaycastHit hit;
 
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range, ~(1 << 10)))
