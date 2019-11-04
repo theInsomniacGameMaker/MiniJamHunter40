@@ -11210,26 +11210,6 @@ PrefabInstance:
       propertyPath: topDown
       value: 
       objectReference: {fileID: 1255502734}
-    - target: {fileID: 608153826, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
-      propertyPath: guns.Array.data[0].currentAmmo
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 608153826, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
-      propertyPath: guns.Array.data[0].fireRate
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 608153826, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
-      propertyPath: guns.Array.data[0].AudioClipName
-      value: Handgun Complete
-      objectReference: {fileID: 0}
-    - target: {fileID: 608153826, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
-      propertyPath: guns.Array.data[1].AudioClipName
-      value: Shotgun Complete
-      objectReference: {fileID: 0}
-    - target: {fileID: 608153826, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
-      propertyPath: guns.Array.data[1].fireRate
-      value: 0.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
 --- !u!4 &979712217 stripped

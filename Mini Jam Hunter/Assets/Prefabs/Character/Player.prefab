@@ -526,6 +526,9 @@ MonoBehaviour:
   firstPerson: {fileID: 104823300}
   topDown: {fileID: 0}
   currentView: 0
+  score: 0
+  nextStep: 0
+  footStepInterval: 0.4
 --- !u!54 &7517651705832886586
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -586,18 +589,20 @@ MonoBehaviour:
   guns:
   - name: Pistol
     damage: 15
-    fireRate: 0.4
-    range: 1000
+    fireRate: 4
+    range: 500
     maxAmmo: 100
-    currentAmmo: 0
+    currentAmmo: 50
     gunMesh: {fileID: 8567051854091999069}
+    AudioClipName: Handgun Complete
   - name: ShotGun
-    damage: 30
-    fireRate: 0.3
-    range: 1000
+    damage: 80
+    fireRate: 0.6
+    range: 100
     maxAmmo: 20
     currentAmmo: 0
     gunMesh: {fileID: 6995776742094133759}
+    AudioClipName: Shotgun Complete
 --- !u!1001 &155241635
 PrefabInstance:
   m_ObjectHideFlags: 0
