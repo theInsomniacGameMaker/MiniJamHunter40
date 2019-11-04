@@ -8,6 +8,7 @@ TagManager:
   - Zombie
   - AmmoBox
   - HealthPack
+  - WaveSpawner
   layers:
   - Default
   - TransparentFX

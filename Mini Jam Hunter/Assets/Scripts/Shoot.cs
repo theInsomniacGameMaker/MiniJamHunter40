@@ -84,4 +84,8 @@ public class Shoot : MonoBehaviour
             guns[i].gunMesh.SetActive(false);
         }
     }
+
+    public int GetAmmoCount() {
+        return guns[currentSelected].currentAmmo;
+    }
 }

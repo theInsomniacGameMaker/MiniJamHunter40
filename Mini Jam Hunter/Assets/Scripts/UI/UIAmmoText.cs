@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIHealthText : MonoBehaviour
+public class UIAmmoText : MonoBehaviour
 {
-    private Entity player;
+    private Shoot shoot;
     private Text text;
 
     private void Awake()
     {
         text = GetComponent<Text>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
+        shoot = GameObject.FindGameObjectWithTag("Player").GetComponent<Shoot>();
     }
 
     private void Update()
     {
-        text.text = player.GetHealthCurrent().ToString();
+        text.text = shoot.GetAmmoCount().ToString();
     }
 }
