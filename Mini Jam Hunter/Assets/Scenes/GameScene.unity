@@ -22937,21 +22937,13 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5506621252731575105, guid: f8f928cf345d8c748919458a3a6bd284,
+    - target: {fileID: 3764125308359342092, guid: f8f928cf345d8c748919458a3a6bd284,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 608153825}
-    - target: {fileID: 6594432103584534031, guid: f8f928cf345d8c748919458a3a6bd284,
+    - target: {fileID: 5692928707383734399, guid: f8f928cf345d8c748919458a3a6bd284,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 608153825}
-    - target: {fileID: 378104535, guid: f8f928cf345d8c748919458a3a6bd284, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 608153825}
-    - target: {fileID: 478772288, guid: f8f928cf345d8c748919458a3a6bd284, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 608153825}
