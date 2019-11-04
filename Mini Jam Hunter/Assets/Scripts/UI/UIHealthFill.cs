@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class UIHealthFill : MonoBehaviour
 {
-    public Entity player;
+    private Entity player;
     private Image image;
     private void Awake()
     {
         image = GetComponent<Image>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
     }
 
     private void Update()

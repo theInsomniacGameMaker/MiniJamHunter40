@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class UIHealthText : MonoBehaviour
 {
-    public Entity player;
+    private Entity player;
     private Text text;
 
     private void Awake()
     {
         text = GetComponent<Text>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity>();
     }
 
     private void Update()
