@@ -86,8 +86,8 @@ public class Zombie : Entity
             if (!foundPlayer)
             {
                 RaycastHit raycastHit;
-                Debug.DrawRay(new Vector3(Random.Range(-100,100), 10, Random.Range(-100, 100)), Vector3.down, Color.yellow, 10f);
-                if (Physics.Raycast(new Vector3(Random.Range(-100, 100), 10, Random.Range(-100, 100)), Vector3.down, out raycastHit, 10, 1 << 9))
+                Debug.DrawRay(new Vector3(Random.Range(-100,100), 10, Random.Range(-200, 360)), Vector3.down, Color.yellow, 10f);
+                if (Physics.Raycast(new Vector3(Random.Range(-200, 280), 10, Random.Range(-200, 360)), Vector3.down, out raycastHit, 10, 1 << 9))
                 {
                     if(raycastHit.transform.CompareTag("Ground"))
                     {
