@@ -27,7 +27,16 @@ public class Player : Entity
             }
         }
     }
-   
+
+    private void Update()
+    {
+        if (healthCurrent<=0)
+        {
+            GameObject.FindGameObjectWithTag("UIDeath").SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.CompareTag("HealthPack"))
