@@ -26,7 +26,10 @@ public class Shoot : MonoBehaviour
 
     private void Start()
     {
-         
+        for (int i = 0; i < guns.Length; i++)
+        {
+            guns[i].currentAmmo = guns[i].maxAmmo;
+        }
     }
 
     private void Update()
