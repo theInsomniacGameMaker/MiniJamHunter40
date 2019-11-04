@@ -15,6 +15,7 @@ public class Player : Entity
             {
                 TakeDamage(collision.gameObject.GetComponent<Zombie>().damage);
                 nextTimeToTakeDamage = Time.time + damageInterval;
+                Controls.Instance.PlaySound("Player Pain 1", transform.position);
             }
         }
     }
@@ -26,12 +27,14 @@ public class Player : Entity
             Debug.Log("Got HEalth PAck");
             Heal(100);
             Destroy(collision.transform.gameObject);
+            Controls.Instance.PlaySound("Health Pack Revive Long", transform.position);
         }
         else if (collision.transform.CompareTag("AmmoBox"))
         {
             Debug.Log("Refill Ammo");
             FindObjectOfType<Shoot>().RefillAmmo();
             Destroy(collision.transform.gameObject);
+            Controls.Instance.PlaySound("Health Pack Grab", transform.position);
         }
     }
 }

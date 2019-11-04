@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.AI;
 
 
@@ -102,6 +103,11 @@ public class Controls : MonoBehaviour
         //Vector3 moveDirection = myAgent.nextPosition - transform.position;
         Vector3 moveDirection = transform.position - myAgent.nextPosition;
         return Vector3.Dot(moveDirection.normalized, transform.forward);
+    }
+
+    public void PlaySound(string name, Vector3 position)
+    {
+        AudioSource.PlayClipAtPoint(Resources.Load(name) as AudioClip, position);
     }
 }
 

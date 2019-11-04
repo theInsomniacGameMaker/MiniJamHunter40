@@ -72,8 +72,9 @@ public class Zombie : Entity
         }
         
         if (healthCurrent <= 0) {
-            Destroy(gameObject);
+            Controls.Instance.PlaySound("Zombie Dying", transform.position);
             Controls.Instance.score += 100;
+            Destroy(gameObject);
         }
     }
 
@@ -102,5 +103,7 @@ public class Zombie : Entity
     {
         base.TakeDamage(damage);
         myAgent.SetDestination (FindObjectOfType<Player>().transform.position);
+        Controls.Instance.PlaySound("Zombie Short Moan", transform.position);
+        
     }
 }

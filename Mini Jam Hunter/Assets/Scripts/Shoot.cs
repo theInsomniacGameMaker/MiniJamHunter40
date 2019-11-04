@@ -13,6 +13,7 @@ public struct Gun
     [HideInInspector]
     public int currentAmmo;
     public GameObject gunMesh;
+    public string AudioClipName;
 }
 
 public class Shoot : MonoBehaviour
@@ -38,38 +39,40 @@ public class Shoot : MonoBehaviour
     {
         if (Controls.Instance.currentView == View.FirstPerson)
         {
-            if (Input.GetMouseButton(0) && Time.time > nextTimeToFire)
+            if (guns[currentSelected].currentAmmo > 0)
             {
-                nextTimeToFire = Time.time + 1.0f / guns[currentSelected].fireRate;
-                Fire();
+                if (Input.GetMouseButton(0) && Time.time > nextTimeToFire)
+                {
+                    nextTimeToFire = Time.time + 1.0f / guns[currentSelected].fireRate;
+                    Fire();
+                }
             }
 
             if (Input.mouseScrollDelta.y>0.5f)
             {
                 currentSelected++;
                 currentSelected = currentSelected % guns.Length;
-                guns[currentSelected].gunMesh.SetActive(true);
                 TurnAllMeshesOff();
+                guns[currentSelected].gunMesh.SetActive(true);
             }
         }
     }
 
     private void Fire()
     {
-        if (guns[currentSelected].maxAmmo>=1)
-        {
-            RaycastHit hit;
+        Controls.Instance.PlaySound(guns[currentSelected].AudioClipName, transform.position);
+        RaycastHit hit;
 
-            if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range, ~(1 << 10)))
+        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, guns[currentSelected].range, ~(1 << 10)))
+        {
+            Debug.Log(hit.transform.name);
+            if (hit.transform.CompareTag("Zombie"))
             {
-                Debug.Log(hit.transform.name);
-                if (hit.transform.CompareTag("Zombie"))
-                {
-                    hit.transform.GetComponent<Zombie>().TakeDamage(guns[currentSelected].damage);
-                }
+                hit.transform.GetComponent<Zombie>().TakeDamage(guns[currentSelected].damage);
             }
-            guns[currentSelected].currentAmmo--;
         }
+        guns[currentSelected].currentAmmo--;
+
     }
 
     public void RefillAmmo()
