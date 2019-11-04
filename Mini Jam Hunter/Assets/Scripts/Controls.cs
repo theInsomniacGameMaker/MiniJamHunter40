@@ -23,6 +23,7 @@ public class Controls : MonoBehaviour
 
     private NavMeshAgent myAgent;
 
+    public int score;
     public bool isMoving
     {
         get

@@ -47,6 +47,6 @@ public class Entity : MonoBehaviour {
     public void Heal(int amount)
     {
         healthCurrent += amount;
-        healthCurrent = healthCurrent > healthMax ? healthCurrent : healthMax;
+        healthCurrent = healthCurrent > healthMax ? healthMax : healthCurrent;
     }
 }
