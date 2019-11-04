@@ -10,7 +10,9 @@ public struct Gun
     public float fireRate;
     public float range;
     public int maxAmmo;
+    [HideInInspector]
     public int currentAmmo;
+    public GameObject gunMesh;
 }
 
 public class Shoot : MonoBehaviour
@@ -41,6 +43,14 @@ public class Shoot : MonoBehaviour
                 nextTimeToFire = Time.time + 1.0f / guns[currentSelected].fireRate;
                 Fire();
             }
+
+            if (Input.mouseScrollDelta.y>0.5f)
+            {
+                currentSelected++;
+                currentSelected = currentSelected % guns.Length;
+                guns[currentSelected].gunMesh.SetActive(true);
+                TurnAllMeshesOff();
+            }
         }
     }
 
@@ -65,5 +75,13 @@ public class Shoot : MonoBehaviour
     public void RefillAmmo()
     {
         guns[currentSelected].currentAmmo = guns[currentSelected].maxAmmo;
+    }
+
+    private void TurnAllMeshesOff()
+    {
+        for (int i = 0; i < guns.Length; i++)
+        {
+            guns[i].gunMesh.SetActive(false);
+        }
     }
 }

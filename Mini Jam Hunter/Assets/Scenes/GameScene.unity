@@ -3614,12 +3614,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258414319}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!20 &260904163 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 104823300, guid: 5de993d2926501d4098cf9c1c1d733d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 979712216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &303362551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,44 +6020,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604258658}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &608153820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8579172114126471378, guid: 5de993d2926501d4098cf9c1c1d733d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 979712216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &608153825 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8157067222779933671, guid: 5de993d2926501d4098cf9c1c1d733d5,
     type: 3}
   m_PrefabInstance: {fileID: 979712216}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608153820}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ef8028c3ec7faa4993174e99f64411a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &608153826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608153820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a83947c616c14e4385824b541f2ade5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsCamera: {fileID: 260904163}
-  guns:
-  - name: Pistol
-    damage: 15
-    fireRate: 0.4
-    range: 1000
-    maxAmmo: 0
-    currentAmmo: 0
 --- !u!1 &621141078
 GameObject:
   m_ObjectHideFlags: 0
@@ -10214,11 +10182,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157067222779933671, guid: 5de993d2926501d4098cf9c1c1d733d5,
-        type: 3}
-      propertyPath: isPlayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1592184560480305055, guid: 5de993d2926501d4098cf9c1c1d733d5,
         type: 3}
