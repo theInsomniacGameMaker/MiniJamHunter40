@@ -11230,6 +11230,11 @@ PrefabInstance:
       propertyPath: guns.Array.data[1].fireRate
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 8157067222779933671, guid: 5de993d2926501d4098cf9c1c1d733d5,
+        type: 3}
+      propertyPath: uiDeath
+      value: 
+      objectReference: {fileID: 1849622415}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de993d2926501d4098cf9c1c1d733d5, type: 3}
 --- !u!4 &979712217 stripped
@@ -21591,6 +21596,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1849622415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7797171040513360676, guid: f8f928cf345d8c748919458a3a6bd284,
+    type: 3}
+  m_PrefabInstance: {fileID: 6962727186392551394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1849883705
 GameObject:
   m_ObjectHideFlags: 0

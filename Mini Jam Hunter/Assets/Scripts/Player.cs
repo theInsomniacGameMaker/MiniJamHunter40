@@ -6,10 +6,12 @@ public class Player : Entity
 {
     float nextTimeToTakeDamage = 0.0f;
     float damageInterval = 2.0f;
-    
+
+   public GameObject uiDeath;
 
     protected override void Awake() {
         base.Awake();
+        Time.timeScale = 1.0f;
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -29,7 +31,7 @@ public class Player : Entity
     {
         if (healthCurrent<=0)
         {
-            GameObject.FindGameObjectWithTag("UIDeath").SetActive(true);
+           uiDeath.SetActive(true);
             Time.timeScale = 0.0f;
         }
     }
