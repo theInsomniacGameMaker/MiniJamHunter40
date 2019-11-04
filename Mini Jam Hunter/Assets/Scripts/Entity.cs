@@ -39,7 +39,7 @@ public class Entity : MonoBehaviour {
         return healthPercent <= 1 ? healthPercent : 1;
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         healthCurrent -= damage;
     }

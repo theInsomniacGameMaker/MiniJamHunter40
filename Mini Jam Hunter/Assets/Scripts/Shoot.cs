@@ -65,7 +65,7 @@ public class Shoot : MonoBehaviour
                 Debug.Log(hit.transform.name);
                 if (hit.transform.CompareTag("Zombie"))
                 {
-                    hit.transform.GetComponent<Entity>().TakeDamage(guns[currentSelected].damage);
+                    hit.transform.GetComponent<Zombie>().TakeDamage(guns[currentSelected].damage);
                 }
             }
             guns[currentSelected].currentAmmo--;

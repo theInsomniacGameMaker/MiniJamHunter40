@@ -73,6 +73,7 @@ public class Zombie : Entity
         
         if (healthCurrent <= 0) {
             Destroy(gameObject);
+            Controls.Instance.score += 100;
         }
     }
 
@@ -97,5 +98,9 @@ public class Zombie : Entity
         }
     }
 
-   
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+        myAgent.SetDestination (FindObjectOfType<Player>().transform.position);
+    }
 }
